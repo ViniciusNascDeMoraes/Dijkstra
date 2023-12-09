@@ -88,7 +88,7 @@
             var node = twelve;
 
             bestWay.Push(node.Name);
-            var totalLength = node.LowestCost;
+            var totalCostRoute = node.LowestCost;
 
             while (node != null && node.BestNeighbour != null)
             {
@@ -96,7 +96,7 @@
                 node = node.BestNeighbour;
             }
 
-            Console.WriteLine($"shortest length: {totalLength}");
+            Console.WriteLine($"Total cost: {totalCostRoute}");
 
             while (bestWay.Count > 0)
             {
